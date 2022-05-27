@@ -3,7 +3,7 @@
 function getTemplate(state) {
 
     return `
-    <div class="slider__before" style="width: ${state.width}px; background-image: url(${state.before})" >
+    <div class="slider__before" id="width" style="width: ${state.width}px; background-image: url(${state.before})" >
         <div class="slider__resize" data-type="resize"></div>
     </div>
     <div class="slider__after" style="background-image: url(${state.after})"></div>
