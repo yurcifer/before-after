@@ -1,4 +1,7 @@
+
+
 function getTemplate(state) {
+
     return `
     <div class="slider__before" style="width: ${state.width}px; background-image: url(${state.before})" >
         <div class="slider__resize" data-type="resize"></div>
@@ -30,11 +33,28 @@ class Slider {
     }
 
     #listen () {
-        this.mouseDownHandler = this.mouseDownHandler.bind(this)
-        this.mouseUpHandler = this.mouseUpHandler.bind(this)
-        this.mouseMoveHandler = this.mouseMoveHandler.bind(this)
-        this.$slider.addEventListener('mousedown', this.mouseDownHandler)
-        this.$slider.addEventListener('mouseup', this.mouseUpHandler)
+        this.mouseDownHandler = this.mouseDownHandler.bind(this);
+        this.mouseUpHandler = this.mouseUpHandler.bind(this);
+        this.mouseMoveHandler = this.mouseMoveHandler.bind(this);
+        this.$slider.addEventListener('mousedown', this.mouseDownHandler);
+        this.$slider.addEventListener('mouseup', this.mouseUpHandler);
+    }
+
+    setBefore (url) {
+        this.state = {
+            ...this.state,
+            before: url
+        }
+        this.#render(this.state)
+    }
+
+    setAfter (url) {
+        console.log();
+        this.state = {
+            ...this.state,
+            after: url
+        }
+        this.#render(this.state)
     }
 
     mouseDownHandler (event) {
@@ -55,7 +75,5 @@ class Slider {
     }
 }
 
-const slider = new Slider('slider', {
-    before: './assets/before.png',
-    after: './assets/after.png',
-});
+
+export default Slider;

@@ -17,6 +17,7 @@ body {
   background-color: bisque;
   position: absolute;
   background-attachment: fixed;
+  background-repeat: no-repeat;
   background-size: 100% auto;
 
   z-index: 2;
@@ -28,7 +29,7 @@ body {
   background-color: aquamarine;
   position: absolute;
   background-attachment: fixed;
-  background-size: 100% auto;
+  background-size: auto 100%;
 
   z-index: 1;
   height: 512px;
@@ -64,3 +65,12 @@ body {
   position: absolute;
   left: 5px;
 }
+
+.input__form {
+  height: auto;
+  width: auto;
+  z-index: 3;
+  position: absolute;
+  top: 0;
+}
+
