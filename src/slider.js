@@ -49,7 +49,6 @@ class Slider {
     }
 
     setAfter (url) {
-        console.log();
         this.state = {
             ...this.state,
             after: url
@@ -61,7 +60,6 @@ class Slider {
         if (event.target.dataset.type === 'resize')
         this.$slider.addEventListener('mousemove', this.mouseMoveHandler);
         this.currentPosition = event.clientX;
-        console.log(this.currentPosition);
     }
 
     mouseUpHandler () {
