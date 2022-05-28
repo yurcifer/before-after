@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  height: 512px;
+  width: 1024px;
+  background-color: lightgray;
+  position: absolute;
+}
+
+.slider__before {
+  background-color: bisque;
+  position: absolute;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  z-index: 2;
+  height: 512px;
+  width: 512px;
+}
+
+.slider__after {
+  background-color: aquamarine;
+  position: absolute;
+  background-attachment: fixed;
+  background-size: auto 100%;
+
+  z-index: 1;
+  height: 512px;
+  width: 1024px;
+}
+
+.slider__resize {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: 0;
+  top: 0;
+  height:100%;
+  width:5px;
+  background-color: white;
+  cursor: e-resize;
+}
+
+.slider__resize:before {
+  content: '<';
+  font-size: 2.5em;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  right: 5px;
+}
+
+.slider__resize:after {
+  content: '>';
+  font-size: 2.5em;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  left: 5px;
+}
+
+.input__form {
+  width: 1024px;
+  z-index: 3;
+  position: absolute;
+  top: 0;
+}
+
+/* input wrapper*/
+.input__wrapper {
+  z-index: 3;
+  top: 0;
+  position: absolute;
+  display: flex;
+  width: 1024px;
+  margin: 15px 0;
+  text-align: center;
+}
+ 
+.input__file-button-text {
+  color: black;
+  margin-top: 1px;
+}
+
+.input__file-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  max-width: 512px;
+  height: 90px;
+  background: #e3e3e3;
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  border-radius: 3px;
+  border: dotted;
+  cursor: pointer;
+  margin: 0 auto;
+}
+

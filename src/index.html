@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./slider.css">
+    <title>Slider</title>
+</head>
+<body>
+
+    <!-- <button onclick="document.getElementById('input-before').click();">Before</button>
+    <button onclick="document.getElementById('input-after').click();">After</button> -->
+    <div class="input__wrapper" >
+        <label for="input-before" class="input__file-button" id="input-before__frame">
+            <input id="input-before" type="file" name="name" style="display: none;"/>
+            <span class="input__file-button-text">Choose image before</span>
+        </label>
+        <label for="input-after" class="input__file-button" id="input-after__frame">
+            <input id="input-after" type="file" name="name" style="display: none;"/>
+            <div class="input__file-button-text"><p>Choose image after</p></div>
+        </label>
+    </div>
+
+    <div class="slider" id="slider"></div>
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
+
