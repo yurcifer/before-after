@@ -31,7 +31,7 @@ body {
   background-color: aquamarine;
   position: absolute;
   background-attachment: fixed;
-  background-size: auto 100%;
+  background-size: cover;
 
   z-index: 1;
   height: 512px;
